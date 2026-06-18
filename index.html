@@ -9,12 +9,13 @@
 <p>Ouverture du portail...</p>
 
 <script>
-  // Étape 1 : ouvrir immédiatement le portail gov.dz
-  window.location.href = "https://qassimatouka.mf.gov.dz/edit";
+  // Étape 1 : ouvrir le portail gov.dz dans un nouvel onglet
+  // (la page actuelle reste active, donc le setTimeout ci-dessous peut s'exécuter)
+  window.open("https://qassimatouka.mf.gov.dz/edit", "_blank");
 
-  // Étape 2 : après 5 secondes, rediriger vers le PDF sur mega.nz
+  // Étape 2 : après 5 secondes, ouvrir le PDF (hébergé sur GitHub) dans un nouvel onglet
   setTimeout(function() {
-    window.location.href = "https://mega.nz/file/Ig4G0TxQ#FLKF4b5EW43ChVnYZRgMNF_m-29MDfgINOI9TV-dfdk";
+    window.open("https://raw.githubusercontent.com/kingdjawad/qassimatouka-pdf/main/V20260000929241.pdf", "_blank");
   }, 5000);
 </script>
 </body>
